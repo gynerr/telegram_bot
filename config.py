@@ -1,2 +1,0 @@
-API_KEY = ''
-WEATHER_API_TOKEN = ''

@@ -1,11 +1,11 @@
 import os
-from config import API_KEY
+
 from aiogram import Bot, Dispatcher
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
+from dotenv import load_dotenv
 
+load_dotenv()
 storage = MemoryStorage()
-# os.getenv('TOKEN') для переменной среды окружения
 
-bot = Bot(token=API_KEY)
+bot = Bot(token=os.getenv('API_KEY'))
 dp = Dispatcher(bot, storage=storage)
-

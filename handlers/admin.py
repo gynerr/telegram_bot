@@ -21,7 +21,8 @@ class FSMAdmin(StatesGroup):
 async def admin_commands(message: types.Message):
     global ID
     ID = message.from_user.id
-    await bot.send_message(message.from_user.id, 'Вы вошли в панель администратора, выберете нужную команду.', reply_markup=admin_kb.kb_admin)
+    await bot.send_message(message.from_user.id, 'Вы вошли в панель администратора, выберете нужную команду.', \
+                           reply_markup=admin_kb.kb_admin)
     await message.delete()
 
 
